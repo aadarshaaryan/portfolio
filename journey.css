@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --dark-bg: #0a0a0a;
+    --darker-bg: #050505;
+    --accent: #5bceed;
+    --accent-glow: rgba(47, 156, 186, 0.4);
+    --text: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: -webkit-fill-available;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #0a0a0a;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 61.6px;
+
+    padding-top: env(safe-area-inset-top);
+    padding-left: calc(30px + env(safe-area-inset-left));
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
+
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.header:hover::before {
+    transform: translateX(100%);
+}
+
+.navbar a {
+    color: #5bceed;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: inline-block;
+}
+
+
+.logo {
+    height: 34px;
+    border-radius: 50%;
+}
+
+.menu-wrapper {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45.6px;
+}
+
+.logo-wrapper {
+    width: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.sidebar {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 61.6px;
+    left: 0;
+    width: 100%;
+    padding: 20px 5px;
+    z-index: 1000;
+}
+
+.sidebar div {
+    background-color: #000;
+    margin: 10px 0;
+    padding: 20px 10px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+    font-size: 1rem;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+.t1 {
+    transform: translateX(-100%);
+}
+
+.t2 {
+    transform: translateX(100%);
+}
+
+.t3 {
+    transform: translateX(-100%);
+}
+
+.t4 {
+    transform: translateX(100%);
+}
+
+.t5 {
+    transform: translateX(-100%);
+}
+
+.sidebar-animation-right {
+    animation: sbr 1s ease forwards;
+}
+
+.sidebar-animation-left {
+    animation: sbl 1s ease forwards;
+}
+
+@keyframes sbr {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes sbl {
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width:768px) {
+    .header {
+        padding: 13px 100px;
+    }
+
+    .hidden {
+        display: inline-block;
+    }
+
+    .shown {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    
+    .nav-links {
+        display: none;
+    }
+}
+
+.navbar a.active {
+    color: white;
+}
+
+.navbar a.active::after {
+    width: 100%;
+}
+
+#sidebar a.active-sidebar div {
+    background-color: #5bceed;
+    color: #000;
+    transform: translateX(0) !important;
+}
+
+#sidebar a:hover div {
+    border-color: #5bceed;
+    box-shadow: 0 0 10px #5bceed;
+}
+
+/* ------------------------------------------------------------- / NAVBAR and SIDEBAR ---------------------------------------------- */
