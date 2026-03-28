@@ -227,14 +227,3 @@ a {
 .navbar a.active::after {
     width: 100%;
 }
-
-#sidebar a.active-sidebar div {
-    background-color: #5bceed;
-    color: #000;
-    transform: translateX(0) !important;
-}
-
-#sidebar a:hover div {
-    border-color: #5bceed;
-    box-shadow: 0 0 10px #5bceed;
-}

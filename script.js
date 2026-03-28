@@ -57,15 +57,3 @@ document.querySelectorAll('.navbar a').forEach(link => {
         link.classList.add('active');
     }
 });
-
-// SIDEBAR
-document.querySelectorAll('#sidebar a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href) return;
-
-    const linkFile = getFileName(href);
-
-    if (linkFile === currentFile) {
-        link.classList.add('active-sidebar');
-    }
-});
