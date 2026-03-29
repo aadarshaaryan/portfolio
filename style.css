@@ -403,3 +403,19 @@ footer {
         display: none;
     }
 }
+
+.cta1{
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #5bceed;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.cta2{
+    position: relative;
+    left: -3.5px;
+}
