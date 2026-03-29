@@ -274,13 +274,12 @@ main {
 
 a {
     text-decoration: none; 
-    /* color: inherit; */
+    color: inherit;
     display: block;
 }
 
 a:visited, a:hover, a:active {
     text-decoration: none;
-    /* color: inherit; */
 }
 
 .navbar a.active {
