@@ -1,3 +1,5 @@
+/* ------------------------------------------------------- GLOBAL -------------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,24 +15,27 @@
     --text: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+    background-color: var(--dark-bg);
+}
+
 body {
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     width: 100%;
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
+
     background-image: url('background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: -webkit-fill-available;
 }
 
-html {
-    scroll-behavior: smooth;
-    background-color: #0a0a0a;
-}
+/* ------------------------------------------------------- HEADER -------------------------------------------------- */
 
 .header {
     position: fixed;
@@ -42,7 +47,6 @@ html {
     padding-top: env(safe-area-inset-top);
     padding-left: calc(30px + env(safe-area-inset-left));
     padding-right: env(safe-area-inset-right);
-    padding-bottom: 0;
 
     display: flex;
     justify-content: space-between;
@@ -54,19 +58,13 @@ html {
 
     border-bottom: 2px solid rgba(255, 255, 255, .2);
     z-index: 1000;
-
-    box-sizing: border-box;
 }
 
 .header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .4), transparent);
-
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
     transform: translateX(-100%);
     transition: transform 0.5s ease;
 }
@@ -75,13 +73,15 @@ html {
     transform: translateX(100%);
 }
 
+/* ------------------------------------------------------- NAVBAR -------------------------------------------------- */
+
 .navbar a {
-    color: #5bceed;
+    color: var(--accent);
     font-size: 18px;
     text-decoration: none;
     margin-left: 35px;
-    transition: all 0.3s ease;
     position: relative;
+    transition: 0.3s;
 }
 
 .navbar a::after {
@@ -92,45 +92,45 @@ html {
     width: 0;
     height: 2px;
     background: var(--accent);
-    transition: width 0.3s ease;
+    transition: width 0.3s;
 }
 
-.navbar a:hover::after {
+.navbar a:hover::after,
+.navbar a.active::after {
     width: 100%;
 }
 
-.hidden {
-    display: none;
+.navbar a.active {
+    color: white;
 }
 
-.shown {
-    display: inline-block;
-}
-
+/* ------------------------------------------------------- LOGO -------------------------------------------------- */
 
 .logo {
     height: 34px;
     border-radius: 50%;
 }
 
-.menu-wrapper {
-    width: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45.6px;
-}
-
 .logo-wrapper {
     width: 50px;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
-a {
-    -webkit-tap-highlight-color: transparent;
+/* ------------------------------------------------------- MENU BUTTON -------------------------------------------------- */
+
+.menu-wrapper {
+    width: 90px;
+    height: 45.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.hidden { display: none; }
+.shown { display: inline-block; }
+
+/* ------------------------------------------------------- HERO -------------------------------------------------- */
 
 .hero {
     min-height: 100vh;
@@ -140,27 +140,21 @@ a {
     align-items: center;
 
     padding-top: calc(61.6px + env(safe-area-inset-top) + 2rem);
-
     padding-left: calc(5% + env(safe-area-inset-left));
     padding-right: calc(5% + env(safe-area-inset-right));
-
     padding-bottom: calc(5% + env(safe-area-inset-bottom));
 
-    background: radial-gradient(circle at 75% 30%, var(--accent-glow) 0%, transparent 30%);
-
-    box-sizing: border-box;
+    background: radial-gradient(circle at 75% 30%, var(--accent-glow), transparent 30%);
 }
 
 .hero-content {
     flex: 1;
     padding-right: 5rem;
-    background-attachment: fixed;
 }
 
 .hero-image {
     flex: 1;
     text-align: center;
-    position: relative;
 }
 
 .profile-img {
@@ -171,50 +165,52 @@ a {
     border: 3px solid var(--accent);
     box-shadow: 0 0 50px var(--accent-glow);
     animation: float 3s ease-in-out infinite;
-    filter: grayscale(0.2) contrast(1.1);
 }
 
+/* Floating animation */
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
 }
 
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1.5rem;
-    background: linear-gradient(45deg, var(--accent) 30%, #ffffff 70%);
+    background: linear-gradient(45deg, var(--accent), #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    margin-bottom: 1.5rem;
     max-width: 600px;
+    opacity: 0.9;
+}
+
+/* Highlight text */
+.highlight {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+/* CTA buttons */
+.cta-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .cta-button {
-    border: none;
-    display: inline-block;
     padding: 1rem 2rem;
+    background: var(--accent);
     color: white;
     border-radius: 8px;
     text-decoration: none;
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    background: var(--accent);
-    cursor: pointer;
-    z-index: 1;
-    font-size: 1rem;
+    transition: 0.3s;
 }
 
 .cta-button::after {
@@ -222,17 +218,17 @@ a {
     position: absolute;
     top: 0;
     left: -100%;
-    background-color: var(--accent-glow);
     width: 100%;
     height: 100%;
-    z-index: -1;
-    transition: all 0.3s ease;
+    background: var(--accent-glow);
+    transition: 0.3s;
 }
 
 .cta-button:hover::after {
     left: 0;
 }
 
+/* ------------------------------------------------------- SKILLS -------------------------------------------------- */
 
 .skills {
     padding: 5rem 5%;
@@ -249,10 +245,10 @@ a {
 .skill-card {
     padding: 2rem;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
     backdrop-filter: blur(5px);
+    transition: 0.3s;
 }
 
 .skill-card:hover {
@@ -267,11 +263,52 @@ a {
     margin-bottom: 1rem;
 }
 
+/* ------------------------------------------------------- SIDEBAR -------------------------------------------------- */
+
+.sidebar {
+    position: fixed;
+    top: 61.6px;
+    left: 0;
+    width: 100%;
+    padding: 20px 5px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+}
+
+.sidebar div {
+    background: #000;
+    margin: 10px 0;
+    padding: 20px 10px;
+    border-radius: 16px;
+    border: 1px solid var(--accent);
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+/* Animations */
+.t1, .t3, .t5 { transform: translateX(-100%); }
+.t2, .t4 { transform: translateX(100%); }
+
+.sidebar-animation-right {
+    animation: sbr 1s forwards;
+}
+.sidebar-animation-left {
+    animation: sbl 1s forwards;
+}
+
+@keyframes sbr { to { transform: translateX(0); } }
+@keyframes sbl { to { transform: translateX(0); } }
+
+/* ------------------------------------------------------- FOOTER -------------------------------------------------- */
+
 footer {
     background: var(--darker-bg);
     padding: 3rem 5%;
     text-align: center;
-    border-radius: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-links {
@@ -284,7 +321,7 @@ footer {
 .social-links a {
     color: var(--text);
     font-size: 1.5rem;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .social-links a:hover {
@@ -293,96 +330,16 @@ footer {
 }
 
 
-.sidebar {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: fixed;
-    top: 61.6px;
-    left: 0;
-    width: 100%;
-    padding: 20px 5px;
-    z-index: 1000;
+
+/* ------------------------------------------------------- RESPONSIVE -------------------------------------------------- */
+
+@media (min-width: 768px) {
+    .header { padding: 13px 100px; }
+    .hidden { display: inline-block; }
+    .shown { display: none; }
 }
 
-.sidebar div {
-    background-color: #000;
-    margin: 10px 0;
-    padding: 20px 10px;
-    border-radius: 16px;
-    border: 1px solid var(--accent);
-    font-size: 1rem;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: var(--accent);
-}
-
-.t1 {
-    transform: translateX(-100%);
-}
-
-.t2 {
-    transform: translateX(100%);
-}
-
-.t3 {
-    transform: translateX(-100%);
-}
-
-.t4 {
-    transform: translateX(100%);
-}
-
-.t5 {
-    transform: translateX(-100%);
-}
-
-.sidebar-animation-right {
-    animation: sbr 1s ease forwards;
-}
-
-.sidebar-animation-left {
-    animation: sbl 1s ease forwards;
-}
-
-@keyframes sbr {
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes sbl {
-    to {
-        transform: translateX(0);
-    }
-}
-
-.navbar a.active {
-    color: white;
-}
-
-.navbar a.active::after {
-    width: 100%;
-}
-
-@media screen and (min-width:768px) {
-    .header {
-        padding: 13px 100px;
-    }
-
-    .hidden {
-        display: inline-block;
-    }
-
-    .shown {
-        display: none;
-    }
-}
-
-@media (max-width:768px) {
+@media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
@@ -399,23 +356,14 @@ footer {
         height: 280px;
     }
 
-    .nav-links {
-        display: none;
+     .cta-group {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
-}
 
-.cta1{
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.highlight {
-    color: #5bceed;
-    font-weight: 600;
-    font-size: 1.3rem;
-}
-
-.cta2{
-    position: relative;
-    left: -3.5px;
+    .cta-button {
+        width: 80%;
+        text-align: center;
+    }
 }

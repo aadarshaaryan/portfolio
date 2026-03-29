@@ -310,6 +310,7 @@ a:active {
     background: red;
     color: var(--dark-bg);
     font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 0 0 6px 6px;
     transition: background 0.3s ease;

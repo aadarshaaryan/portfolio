@@ -72,28 +72,33 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">
+        <a href="index.html" class="logo">
             <div class="logo-wrapper">
                 <img src="aadarsh-srivastava.png" alt="Aadarsh Srivastava" class="logo" loading="lazy">
             </div>
         </a>
+
         <nav class="navbar">
+            <!-- IMPORTANT: keep href + structure for JS -->
             <a class="hidden" href="index.html">Home</a>
             <a class="hidden" href="projects.html">Projects</a>
             <a class="hidden" href="journey.html">Journey</a>
             <a class="hidden" href="about.html">About</a>
             <a class="hidden" href="contact.html">Contact</a>
+
+            <!-- JS depends on this ID -->
             <a class="shown" id="sidebarBtn">
                 <div class="menu-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         viewBox="0 0 24 24">
-                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                         <path d="M4 11h11v2H4zm0-5h16v2H4zm0 10h8v2H4zm15-3h-2v3h-3v2h3v3h2v-3h3v-2h-3z"></path>
                     </svg>
                 </div>
             </a>
         </nav>
     </header>
+
+    <!-- JS depends on id="sidebar" -->
     <div id="sidebar" class="sidebar">
         <a href="index.html">
             <div class="t1 t0a">Home</div>
@@ -111,7 +116,8 @@
             <div class="t5 t0a">Contact</div>
         </a>
     </div>
-    <main class="main">
+
+    <main>
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1>Full-Stack Developer</h1>
@@ -124,12 +130,16 @@
                 <p class="highlight">
                     Helping beginners understand coding through real experiences.
                 </p>
-                <button class="cta-button cta1" onclick="window.location.href='projects.html'">Explore
-                    Projects</button>
-                <button class="cta-button cta2" onclick="window.location.href='journey.html'">My Journey</button>
+
+                <!-- FIXED: clean CTA (no hack classes) -->
+                <div class="cta-group">
+                    <a href="projects.html" class="cta-button">Explore Projects</a>
+                    <a href="journey.html" class="cta-button">My Journey</a>
+                </div>
             </div>
+
             <div class="hero-image">
-                <img src="aadarsh-srivastava.png" alt="Aadarsh Srivasatava" class="profile-img" loading="lazy">
+                <img src="aadarsh-srivastava.png" alt="Aadarsh Srivastava" class="profile-img" loading="lazy">
             </div>
         </section>
         <section id="skills" class="skills">
@@ -156,8 +166,8 @@
     <footer>
         <p>&copy; 2026 Aadarsh Srivastava. All rights reserved.</p>
         <div class="social-links">
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/aadarshaaryan"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/aadarshaaryan.official/"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="#"><i class="fa-brands fa-reddit"></i></a>
         </div>
