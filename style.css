@@ -35,6 +35,11 @@ body {
     background-attachment: fixed;
 }
 
+body::selection{
+    color: white;
+    background-color: var(--accent);
+}
+
 /* ------------------------------------------------------- HEADER -------------------------------------------------- */
 
 .header {
