@@ -25,7 +25,7 @@ const toggleAnimations = (show) => {
 sidebar.style.display = 'none';
 sidebarBtn.addEventListener('click', () => {
     const opening = sidebar.style.display === 'none';
-    
+
     sidebar.style.display = opening ? 'block' : 'none';
     toggleAnimations(opening);
 });
@@ -56,4 +56,11 @@ document.querySelectorAll('.navbar a').forEach(link => {
     if (linkFile === currentFile) {
         link.classList.add('active');
     }
+});
+
+document.querySelectorAll('.second-nav a').forEach(link => {
+    link.addEventListener('click', function () {
+        document.querySelectorAll('.second-nav a').forEach(a => a.classList.remove('active'));
+        this.classList.add('active');
+    });
 });
