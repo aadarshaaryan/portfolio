@@ -372,3 +372,11 @@ footer {
         text-align: center;
     }
 }
+
+h2{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    opacity: 0.9;
+    font-weight: normal;
+}

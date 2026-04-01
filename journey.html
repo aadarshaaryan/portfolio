@@ -6,27 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- Title -->
     <title>Aadarsh Aaryan | Coding Journey & Learning Experience</title>
 
-    <!-- SEO Meta -->
     <meta name="description"
         content="Explore Aadarsh Aaryan's coding journey — from learning basics to building real projects. Understand his approach, challenges, and growth as a developer.">
     <meta name="author" content="Aadarsh Aaryan">
     <meta name="robots" content="index, follow">
 
-    <!-- Theme -->
     <meta name="theme-color" content="#5bceed">
     <meta name="msapplication-TileColor" content="#0a0a0a">
 
-    <!-- Icons -->
     <link rel="icon" type="image/x-icon" href="aadarsh-srivastava.ico">
     <link rel="apple-touch-icon" href="aadarsh-srivastava.png">
 
-    <!-- Canonical -->
     <link rel="canonical" href="https://aadarshaaryan.github.io/portfolio/journey.html">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://aadarshaaryan.github.io/portfolio/journey.html">
     <meta property="og:title" content="Aadarsh Aaryan | Coding Journey & Learning Experience">
@@ -34,7 +28,6 @@
         content="Explore Aadarsh Aaryan's coding journey — how he learned by building real projects and improved step by step.">
     <meta property="og:image" content="https://aadarshaaryan.github.io/portfolio/Aadarsh-Srivastava-Portfolio.png">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://aadarshaaryan.github.io/portfolio/journey.html">
     <meta name="twitter:title" content="Aadarsh Aaryan | Coding Journey & Learning Experience">
@@ -42,20 +35,21 @@
         content="Follow the coding journey of Aadarsh Aaryan and see how he builds and learns by doing real projects.">
     <meta name="twitter:image" content="https://aadarshaaryan.github.io/portfolio/Aadarsh-Srivastava-Portfolio.png">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Coding Journey of Aadarsh Aaryan",
-  "author": {
-    "@type": "Person",
-    "name": "Aadarsh Aaryan"
-  },
-  "description": "A detailed coding journey showing how Aadarsh learned by building real projects and improving step by step.",
-  "url": "https://aadarshaaryan.github.io/portfolio/journey.html"
-}
-</script>
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Coding Journey of Aadarsh Aaryan",
+      "author": {
+        "@type": "Person",
+        "name": "Aadarsh Aaryan"
+      },
+      "description": "A detailed coding journey showing how Aadarsh learned by building real projects and improving step by step.",
+      "url": "https://aadarshaaryan.github.io/portfolio/journey.html",
+      "dependencies": "Node.js, Socket.io, JavaScript, HTML, CSS"
+    }
+    </script>
+
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
             c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
@@ -68,7 +62,7 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">
+        <a href="#" class="logo" aria-label="Home">
             <div class="logo-wrapper">
                 <img src="aadarsh-srivastava.png" alt="Aadarsh Srivastava" class="logo" loading="lazy">
             </div>
@@ -79,18 +73,18 @@
             <a class="hidden" href="journey.html">Journey</a>
             <a class="hidden" href="about.html">About</a>
             <a class="hidden" href="contact.html">Contact</a>
-            <a class="shown" id="sidebarBtn">
+            <a class="shown" id="sidebarBtn" aria-label="Menu">
                 <div class="menu-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
                         viewBox="0 0 24 24">
-                        <!--Boxicons v3.0.8 https://boxicons.com | License  https://docs.boxicons.com/free-->
                         <path d="M4 11h11v2H4zm0-5h16v2H4zm0 10h8v2H4zm15-3h-2v3h-3v2h3v3h2v-3h3v-2h-3z"></path>
                     </svg>
                 </div>
             </a>
         </nav>
     </header>
-    <div id="sidebar" class="sidebar">
+
+    <aside id="sidebar" class="sidebar">
         <a href="index.html">
             <div class="t1 t0a">Home</div>
         </a>
@@ -106,158 +100,157 @@
         <a href="contact.html">
             <div class="t5 t0a">Contact</div>
         </a>
-    </div>
-    <div class="second-nav">
+    </aside>
+
+    <nav class="second-nav">
         <a href="#learning">Learning</a>
         <a href="#project_journey">Project Journey</a>
-    </div>
+    </nav>
 
-    <main>
+    <main role="main">
         <div class="journey-wrapper">
-            <div id="learning" class="journey-section scroll-margin-aim">
+            <section id="learning" class="journey-section scroll-margin-aim">
                 <h2>Learning</h2>
-                <p class="para">
-                    content writing in process
-                </p>
-            </div>
+                <p class="para">content writing in process</p>
+            </section>
 
-            <div id="project_journey" class="journey-section scroll-margin-aim">
-                <h2>Project Journey</h2>
+            <article id="project_journey" class="journey-section scroll-margin-aim" itemscope
+                itemtype="https://schema.org/TechArticle">
+                <h2 itemprop="headline">Project Journey</h2>
                 <h3 id="chat-app-journey" class="second-heading scroll-margin-aim">1. Real-Time Chat App</h3><br>
                 <div class="pas">
                     <p><a href="projects.html#chat-app-project">Preview</a></p>
-                    <p><a href="https://github.com/aadarshaaryan/a-chat">Source Code</a></p>
+                    <p><a target="_blank" rel="noopener" href="https://github.com/aadarshaaryan/a-chat"
+                            rel="noopener">Source Code</a></p>
                 </div>
-                <p class="third-heading"><b>🚀 Idea & Curiosity</b></p><br>
-                <p class="para">You might be surprised to know that I decided to build this when I only knew HTML, CSS,
-                    and had just
-                    finished intermediate JavaScript. <br><br>
 
-                    The idea came from a simple thought — users enjoy things like emojis, GIFs, and visually appealing
-                    chat spaces. But most messaging apps focus heavily on security (which is important), while design
-                    flexibility and personalization often feel limited. <br><br>
+                <div itemprop="articleBody">
+                    <h4 class="third-heading"><b>🚀 Idea & Curiosity</b></h4>
+                    <ul class="para">
+                        <li>You might be surprised to know that I decided to build this when I only knew HTML, CSS, and
+                            had just finished intermediate JavaScript.</li>
+                        <li>The idea came from a simple thought — users enjoy things like emojis, GIFs, and visually
+                            appealing chat spaces. But most messaging apps focus heavily on security (which is
+                            important), while design flexibility and personalization often feel limited.</li>
+                        <li>I wanted to explore a different angle: what if a chat app allowed users to make their chat
+                            space more expressive and visually engaging — almost like customizing their own room (okay,
+                            maybe not literally a bedroom 😅).</li>
+                        <li>Since this was my first time building something like this, I decided not to overthink
+                            everything at once. My focus was to first understand how real-time chat actually works, and
+                            then gradually improve things like security later.</li>
+                        <li>The challenge was obvious — I had barely practiced JavaScript deeply, knew only around 10%
+                            of Node.js, and had never worked with concepts like Socket.IO before. I wasn’t even sure
+                            what technologies were required at the beginning. To figure that out, I consulted an AI
+                            chatbot, which gave me a starting direction — and from there, the real journey began.</li>
+                    </ul>
 
-                    I wanted to explore a different angle: what if a chat app allowed users to make their chat space
-                    more expressive and visually engaging — almost like customizing their own room (okay, maybe not
-                    literally a bedroom 😅). <br><br>
+                    <h4 class="third-heading"><b>😵 Starting Without Knowing</b></h4>
+                    <ul class="para">
+                        <li>You might think that starting a project without fully understanding the concepts isn’t a
+                            good idea, but I realized the opposite. When you try to build something with even a little
+                            knowledge and figure things out along the way, the learning becomes much more engaging and
+                            real. It keeps you from getting bored and pushes you toward actual developer-style learning,
+                            not just theory.</li>
+                        <li>Programming isn’t about memorizing — it’s about practicing and experimenting. I believed
+                            that if I kept building and modifying things in my own way, I would eventually go beyond
+                            just copying code and truly understand what I was doing.</li>
+                    </ul>
 
-                    Since this was my first time building something like this, I decided not to overthink everything at
-                    once. My focus was to first understand how real-time chat actually works, and then gradually improve
-                    things like security later. <br><br>
+                    <h4 class="third-heading"><b>🤖 Using AI as a Learning Tool</b></h4>
+                    <ul class="para">
+                        <li>At the beginning, I wasn’t even sure what technologies were required to build a real-time
+                            chat application. So, I asked an AI chatbot what I needed. It suggested using Node.js for
+                            the backend and Socket.IO for real-time communication.</li>
+                        <li>I then asked whether I needed to complete Node.js fully before starting. The answer was no —
+                            I only needed to understand the basic concept, like how the backend connects with the
+                            frontend. I also asked about Socket.IO, thinking it might be as large as JavaScript or
+                            Python, but it turned out to be a small and focused tool that could be understood quickly.
+                        </li>
+                        <li>After that, I tried learning Socket.IO from YouTube, but most videos were teaching
+                            everything in depth, which wasn’t what I needed at that moment. I didn’t want to master the
+                            entire concept first — I wanted to start building.</li>
+                        <li>So instead, I asked the AI to give me a basic working code. I copied it and ran it.
+                            Surprisingly, the code was much smaller and simpler than I had imagined. That gave me
+                            confidence.</li>
+                        <li>Then I carefully observed how HTML, CSS, JavaScript, and Node.js were working together. I
+                            asked the AI to explain the code line by line and cleared my doubts step by step.</li>
+                        <li>After understanding it, I challenged myself to build it on my own. I got confused again at
+                            some points and faced errors, but I kept debugging and asking questions. Finally, on my
+                            second attempt, I was able to create it myself — not by memorizing the code, but by actually
+                            understanding it.</li>
+                        <li>One thing I learned from this process is that it doesn’t matter which AI tool you use. What
+                            matters is how you use it — as a guide or teacher, not just for copying answers.</li>
+                    </ul>
 
-                    The challenge was obvious — I had barely practiced JavaScript deeply, knew only around 10% of
-                    Node.js, and had never worked with concepts like Socket.IO before. I wasn’t even sure what
-                    technologies were required at the beginning. To figure that out, I consulted an AI chatbot, which
-                    gave me a starting direction — and from there, the real journey began.</p><br><br>
-                <p class="third-heading"><b>😵 Starting Without Knowing</b></p><br>
-                <p class="para">
-                    You might think that starting a project without fully understanding the concepts isn’t a good idea,
-                    but I realized the opposite. When you try to build something with even a little knowledge and figure
-                    things out along the way, the learning becomes much more engaging and real. It keeps you from
-                    getting bored and pushes you toward actual developer-style learning, not just theory. <br><br>
+                    <h4 class="third-heading"><b>🧩 Breaking & Fixing Things</b></h4>
+                    <ul class="para">
+                        <li>I didn’t treat AI-generated code as something to copy blindly. Instead, I used it as a guide
+                            and tried building things in my own way. When things worked, it reinforced my understanding;
+                            when they didn’t, I debugged and asked why the error occurred.</li>
+                        <li>Because I focused on concepts rather than memorization, mistakes became a key part of my
+                            learning process.</li>
+                    </ul>
 
-                    Programming isn’t about memorizing — it’s about practicing and experimenting. I believed that if I
-                    kept building and modifying things in my own way, I would eventually go beyond just copying code and
-                    truly understand what I was doing. <br><br><br>
-                </p>
-                <p class="third-heading"><b>🤖 Using AI as a Learning Tool</b></p><br>
-                <p class="para">
-                    At the beginning, I wasn’t even sure what technologies were required to build a real-time chat
-                    application. So, I asked an AI chatbot what I needed. It suggested using Node.js for the backend and
-                    Socket.IO for real-time communication. <br><br>
+                    <h4 class="third-heading"><b>🔁 Iterations & Improvements</b></h4>
+                    <ul class="para">
+                        <li>I enhanced the chat experience by adding features like emoji support, message formatting,
+                            and keyboard-based message sending. I also experimented with localStorage to persist user
+                            data and messages across refreshes (though not extensively yet).</li>
+                        <li>These small improvements helped me understand how frontend state, UI behavior, and real-time
+                            updates work together.</li>
+                    </ul>
 
-                    I then asked whether I needed to complete Node.js fully before starting. The answer was no — I only
-                    needed to understand the basic concept, like how the backend connects with the frontend. I also
-                    asked about Socket.IO, thinking it might be as large as JavaScript or Python, but it turned out to
-                    be a small and focused tool that could be understood quickly. <br><br>
+                    <h4 class="third-heading"><b>⚡ Understanding the Core Concept</b></h4>
+                    <ul class="para">
+                        <li>While building this project, I understood how real-time communication actually works.</li>
+                        <li>The client connects to the server using Socket.IO, and both communicate through events. When
+                            a user sends a message, it is emitted to the server, which then broadcasts it to all
+                            connected clients</li>
+                        <li>I also learned how the server keeps track of users using sockets, and how events like
+                            joining, messaging, and disconnecting are handled in real time.</li>
+                        <li>This helped me move from just “using code” to actually understanding the flow behind
+                            real-time systems.</li>
+                    </ul>
 
-                    After that, I tried learning Socket.IO from YouTube, but most videos were teaching everything in
-                    depth, which wasn’t what I needed at that moment. I didn’t want to master the entire concept first —
-                    I wanted to start building. <br><br>
+                    <h4 class="third-heading"><b>🧠 What Changed in Me</b></h4>
+                    <ul class="para">
+                        <li>Before this project, I used to think that I needed to learn everything first before building
+                            something real. But this experience changed that mindset completely.</li>
+                        <li>I realized that starting with limited knowledge and learning along the way is far more
+                            effective than waiting to feel “fully ready.” Instead of depending on tutorials, I began
+                            focusing on understanding how things work and building from that understanding.</li>
+                        <li>I also became more comfortable with confusion and errors. Earlier, they felt like obstacles,
+                            but now I see them as part of the process.</li>
+                        <li>Overall, this project shifted me from just learning code to actually thinking like a
+                            developer.</li>
+                    </ul>
 
-                    So instead, I asked the AI to give me a basic working code. I copied it and ran it. Surprisingly,
-                    the code was much smaller and simpler than I had imagined. That gave me confidence. <br><br>
+                    <h4 class="third-heading"><b>🔮 What’s Next</b></h4>
+                    <ul class="para">
+                        <li>This was the final stage of my journey with this real-time chat application. While writing
+                            about it, I also had to balance the experience with the overall UX of this portfolio.</li>
+                        <li>If you <a href="projects.html#chat-app-project">preview this project</a>, you might wonder —
+                            where are the advanced features I mentioned, like custom designs, emojis, or interactive
+                            chat spaces? There aren’t even separate rooms or authentication yet.</li>
+                        <li>The reason is simple: toward the end, I realized that my goal was learning, not perfection.
+                            I had already understood the core concept of real-time communication, and I didn’t want to
+                            get stuck focusing only on design or extra features.</li>
+                        <li>Instead, I chose to move forward and explore other <a href="projects.html">projects</a>,
+                            applying what I learned here in new ways.</li>
+                        <li>I’ve also shared the <a target="_blank" rel="noopener"
+                                href="https://github.com/aadarshaaryan/a-chat">source code</a> above
+                            — feel free to explore it, understand it, take help from AI if needed, and try building it
+                            yourself.</li>
+                    </ul>
+                </div>
 
-                    Then I carefully observed how HTML, CSS, JavaScript, and Node.js were working together. I asked the
-                    AI to explain the code line by line and cleared my doubts step by step. <br><br>
-
-                    After understanding it, I challenged myself to build it on my own. I got confused again at some
-                    points and faced errors, but I kept debugging and asking questions. Finally, on my second attempt, I
-                    was able to create it myself — not by memorizing the code, but by actually understanding it.
-                    <br><br>
-
-                    One thing I learned from this process is that it doesn’t matter which AI tool you use. What matters
-                    is how you use it — as a guide or teacher, not just for copying answers. <br><br><br>
-                </p>
-                <p class="third-heading"><b>🧩 Breaking & Fixing Things</b></p><br>
-                <p class="para">
-                    I didn’t treat AI-generated code as something to copy blindly. Instead, I used it as a guide and
-                    tried building things in my own way. When things worked, it reinforced my understanding; when they
-                    didn’t, I debugged and asked why the error occurred. <br><br>
-
-                    Because I focused on concepts rather than memorization, mistakes became a key part of my learning
-                    process. <br><br><br>
-                </p>
-                <p class="third-heading"><b>🔁 Iterations & Improvements</b></p><br>
-                <p class="para">
-                    I enhanced the chat experience by adding features like emoji support, message formatting, and
-                    keyboard-based message sending. I also experimented with localStorage to persist user data and
-                    messages across refreshes (though not extensively yet). <br><br>
-
-                    These small improvements helped me understand how frontend state, UI behavior, and real-time updates
-                    work together. <br><br><br>
-                </p>
-                <p class="third-heading"><b>⚡ Understanding the Core Concept</b></p><br>
-                <p class="para">
-                    While building this project, I understood how real-time communication actually works. <br><br>
-
-                    The client connects to the server using Socket.IO, and both communicate through events. When a user
-                    sends a message, it is emitted to the server, which then broadcasts it to all connected clients.
-                    <br><br>
-
-                    I also learned how the server keeps track of users using sockets, and how events like joining,
-                    messaging, and disconnecting are handled in real time. <br><br>
-
-                    This helped me move from just “using code” to actually understanding the flow behind real-time
-                    systems. <br><br><br>
-                </p>
-                <p class="third-heading"><b>🧠 What Changed in Me</b></p><br>
-                <p class="para">
-                    Before this project, I used to think that I needed to learn everything first before building
-                    something real. But this experience changed that mindset completely. <br><br>
-
-                    I realized that starting with limited knowledge and learning along the way is far more effective
-                    than waiting to feel “fully ready.” Instead of depending on tutorials, I began focusing on
-                    understanding how things work and building from that understanding. <br><br>
-
-                    I also became more comfortable with confusion and errors. Earlier, they felt like obstacles, but now
-                    I see them as part of the process. <br><br>
-
-                    Overall, this project shifted me from just learning code to actually thinking like a developer.
-                    <br><br><br>
-                </p>
-                <p class="third-heading"><b>🔮 What’s Next</b></p><br>
-                <p class="para">
-                    This was the final stage of my journey with this real-time chat application. While writing about it,
-                    I also had to balance the experience with the overall UX of this portfolio. <br><br>
-
-                    If you <a href="projects.html#chat-app-project">preview this project</a>, you might wonder — where
-                    are the advanced features I
-                    mentioned, like custom designs, emojis, or interactive chat spaces? There aren’t even separate rooms
-                    or authentication yet. <br><br>
-
-                    The reason is simple: toward the end, I realized that my goal was learning, not perfection. I had
-                    already understood the core concept of real-time communication, and I didn’t want to get stuck
-                    focusing only on design or extra features. <br><br>
-
-                    Instead, I chose to move forward and explore other <a href="projects.html">projects</a>, applying
-                    what I learned here in new ways. <br><br>
-
-                    I’ve also shared the <a href="https://github.com/aadarshaaryan/a-chat">source code</a> above — feel
-                    free to explore it, understand it, take help from AI
-                    if needed, and try building it yourself. <br><br><br>
-                </p>
-            </div>
+                <strong>
+                    This project reflects my build-first approach, where I start with limited knowledge and learn by
+                    building instead of waiting to master everything first.
+                </strong>
+                <h1>Aadarsh Aaryan’s approach focuses on learning by building instead of waiting for complete knowledge.
+                </h1>
+            </article>
         </div>
     </main>
     <script src="script.js"></script>
